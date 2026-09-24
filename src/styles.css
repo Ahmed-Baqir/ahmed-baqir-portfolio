@@ -52,7 +52,7 @@ a:focus-visible{outline:2px solid #FFFFFF;outline-offset:4px;border-radius:6px}
   #app [style*="justify-content: flex-end"]{justify-content:flex-start !important}
   #app [style*="justify-content: space-between; align-items: flex-end"]{flex-direction:column;align-items:flex-start !important}
   #app h2[style]{font-size:44px !important}
-  #app [style*="padding: 96px 72px"],#app [style*="padding: 64px 64px"]{padding:48px 24px !important}
+  #app [style*="padding: 96px 72px"],#app [style*="padding: 80px 64px"]{padding:48px 24px !important}
 }
 @media (max-width: 680px){
   .navlink{display:none !important}

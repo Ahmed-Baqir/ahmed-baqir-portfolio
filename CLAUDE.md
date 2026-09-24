@@ -14,7 +14,8 @@ Its job is to win freelance GoHighLevel client projects.
 ## Design rules
 - Dark theme: black background (#0A0A0A), white-to-grey gradient headings, no colour accents.
 - Fonts: Syne (display), Manrope (body), JetBrains Mono (rolling title).
-- Logo: the two-node workflow mark next to "Ahmed Baqir" in the nav. Never use "AB".
+- Logo: the gear-and-clock mark (mechanism + timepiece hands, evoking old machinery
+  and automation) next to "Ahmed Baqir" in the nav, and matching favicon. Never use "AB".
 - Section labels have no numbers; they use a short line before the name.
 - Sticky nav: links must land with the section heading just below the nav bar
   (tuned with `scroll-margin-top` on each section id).
