@@ -32,5 +32,7 @@ Its job is to win freelance GoHighLevel client projects.
 - Testimonials are still placeholders.
 
 ## Git workflow
-- Default branch: `main`. Commit with clear messages and push after each change
-  so GitHub Pages redeploys.
+- Default branch: `main`.
+- After every change the user asks for: run `npm run build` to confirm it succeeds,
+  then commit with a clear message and push to `main` automatically — do this without
+  asking for confirmation first. If the build fails, fix the issue before committing.
