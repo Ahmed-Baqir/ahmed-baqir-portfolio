@@ -17,8 +17,11 @@ a{color:#EDEDED;text-decoration:none}a:hover{color:#FFFFFF}
 html{scroll-behavior:smooth}
 [id]{scroll-margin-top:0}
 #top{scroll-margin-top:80px}
-#services,#approach,#experience{scroll-margin-top:-28px}
-#contact{scroll-margin-top:-8px}
+#services,#experience{scroll-margin-top:-28px}
+#approach{scroll-margin-top:-124px}
+#contact{scroll-margin-top:-108px}
+.logo-gear{transform-box:fill-box;transform-origin:center;transition:transform .4s ease}
+a:hover .logo-gear{transform:rotate(45deg)}
 .topbar{position:sticky;top:0;z-index:60;background:rgba(10,10,10,.72);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid #1A1A1A}
 .navlink{position:relative;display:inline-flex;align-items:center;min-height:44px;color:#A3A3A3;transition:color .2s ease}
 .navlink::after{content:'';position:absolute;left:0;right:0;bottom:8px;height:1px;background:#FFFFFF;transform:scaleX(0);transform-origin:right;transition:transform .35s ease}
@@ -37,13 +40,13 @@ html{scroll-behavior:smooth}
 .gridlit.on{opacity:1}
 #app.still .spot,.still .gridlit{display:none}
 #app.still *{animation:none !important;transition:none !important}
-@media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}
+@media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}a:hover .logo-gear{transform:none !important}}
 
 /* Keyboard focus */
 a:focus-visible{outline:2px solid #FFFFFF;outline-offset:4px;border-radius:6px}
 #roller span{display:inline-block}
 
-/* Tablet & mobile */
+/* Tablet & mobile — max-width only, desktop (>=1024px) is untouched */
 @media (max-width: 1000px){
   #app [style*="px 48px"]{padding-left:24px !important;padding-right:24px !important}
   #app [style*="grid-template-columns: repeat(3"],#app [style*="grid-template-columns: repeat(4"]{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
@@ -52,14 +55,28 @@ a:focus-visible{outline:2px solid #FFFFFF;outline-offset:4px;border-radius:6px}
   #app [style*="justify-content: flex-end"]{justify-content:flex-start !important}
   #app [style*="justify-content: space-between; align-items: flex-end"]{flex-direction:column;align-items:flex-start !important}
   #app h2[style]{font-size:44px !important}
-  #app [style*="padding: 96px 72px"],#app [style*="padding: 80px 64px"]{padding:48px 24px !important}
+  #app [style*="padding: 96px 72px"]{padding:48px 24px !important}
+  #app [style*="padding: 112px 48px 128px"]{padding-top:88px !important;padding-bottom:96px !important}
+  #app [style*="padding: 140px 48px"]{padding-top:100px !important}
+  .contact-card{padding:48px 32px !important}
+  .hero-stats>div:nth-child(3){border-left:none !important;border-top:1px solid #242424 !important;padding-top:28px !important}
+  nav[aria-label="Main"]{gap:16px !important}
+  nav[aria-label="Main"]>div{gap:20px !important}
+  #approach,#contact{scroll-margin-top:-76px !important}
 }
 @media (max-width: 680px){
   .navlink{display:none !important}
   #app [style*="grid-template-columns: repeat(2"],#app [style*="grid-template-columns: repeat(3"],#app [style*="grid-template-columns: repeat(4"]{grid-template-columns:1fr !important}
   #app [style*="border-left: 1px solid #242424"]{border-left:none !important;padding-left:0 !important}
-  #app h2[style]{font-size:36px !important}
+  #app h2[style]{font-size:32px !important}
   #app [style*="padding: 112px 48px 128px"]{padding-top:64px !important;padding-bottom:72px !important}
-  #app [style*="padding: 140px 48px"]{padding-top:88px !important}
-  #app [style*="justify-content: space-between; align-items: baseline"]{flex-direction:column}
+  #app [style*="padding: 140px 48px"]{padding-top:72px !important}
+  #app [style*="justify-content: space-between; align-items: baseline"]{flex-direction:column;align-items:flex-start !important;gap:8px !important}
+  #app [style*="justify-content: space-between; gap: 24px; font-size: 14px"]{flex-direction:column;gap:6px !important}
+  .contact-card{padding:32px 20px !important}
+  .roller-line p{font-size:15px !important}
+  .hero-actions>a{width:100%;justify-content:center}
+  #contact{scroll-margin-top:-60px !important}
+  #app h1[aria-label="Ahmed Baqir"]{font-size:clamp(42px,12vw,60px) !important}
+  #app h1[aria-label="Ahmed Baqir"]>span:nth-child(2){padding-left:0.3em !important}
 }
